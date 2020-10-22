@@ -1,3 +1,0 @@
-u folderu dist -CMD: pip install dbaric_parser_gid-0.0.1.tar.gz - napravljeni novi fajl u C:\Python37\Lib\site-packages\ parse_gid_files.py
-
-u  C:\Python37\Lib\site-packages\ ---> python parse_gid_files.py -c :flow:total_mass -p D:\AVL_Baric\AVL_ZAG_Test_Assignment_Analyse_Total_Mass\Data\003_B1_SN2c2_FL_3500rpm\2D_Results\003_B1_SN2c2_FL_3500rpm_fl2.gid D:\AVL_Baric\AVL_ZAG_Test_Assignment_Analyse_Total_Mass\Data\004_B1_SN1c7_FL_3750rpm\2D_Results\004_B1_SN1c7_FL_3750rpm_fl2.gid
