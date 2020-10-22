@@ -1,0 +1,7 @@
+setup.py
+src/parse_gid_files.py
+src/dbaric_parser_gid.egg-info/PKG-INFO
+src/dbaric_parser_gid.egg-info/SOURCES.txt
+src/dbaric_parser_gid.egg-info/dependency_links.txt
+src/dbaric_parser_gid.egg-info/entry_points.txt
+src/dbaric_parser_gid.egg-info/top_level.txt

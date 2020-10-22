@@ -1,0 +1,3 @@
+[console_scripts]
+parse_gid_files = parse_gid_files:main
+
