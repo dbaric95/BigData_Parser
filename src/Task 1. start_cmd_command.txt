@@ -1,1 +1,0 @@
-python parse_gid_files.py -c :flow:total_mass -p D:\git\BigData_Parser\src\Input_Files\003_B1_SN2c2_FL_3500rpm\2D_Results\003_B1_SN2c2_FL_3500rpm_fl2.gid D:\git\BigData_Parser\src\Input_Files\004_B1_SN1c7_FL_3750rpm\2D_Results\004_B1_SN1c7_FL_3750rpm_fl2.gid
