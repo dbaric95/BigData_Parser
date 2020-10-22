@@ -6,7 +6,7 @@ setup(
     author="Davor Baric",
     author_email="davorbaric1r@example.com",
     description="package for parse_gid script",
-    url="https://github.com",
+    url="https://github.com/dbaric95/BigData_Parser/",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -19,6 +19,9 @@ setup(
     },
     package_dir={'': 'src'},
     py_modules=["parse_gid_files"],
-    python_requires='>=3.7'
+    python_requires='>=3.7',
+    install_requires=[
+        'statistics'
+    ],
 )
 
