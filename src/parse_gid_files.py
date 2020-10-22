@@ -15,6 +15,7 @@
 import argparse
 import matplotlib.pyplot as plt
 import statistics
+import itertools
 
 
 def get_user_input():
@@ -71,6 +72,18 @@ def display_average_curve(crank_values, avg_mass, ylabel_name):
     plt.grid(True)
     plt.savefig('Average_Total.pdf')
     plt.close()
+    return crank_values, avg_result, ylabel_name
+
+
+def create_summary_file(crank_values, avg_result, ylabel_name):
+    f = open("Summary_Average_Curve.txt", "w")
+    f.write('Crank Angle\t|\t' + ylabel_name + '\n')
+    f.write('_' * 45 + '\n')
+    for crank, avg in zip(crank_values, avg_result):
+        f.write(str(crank) + '\t\t|\t' + str(avg) + '\n')
+        f.write('-' * 45 + '\n')
+
+    f.close()
 
 
 def get_value_index_channel_from_gid(path, index_CAngle, index_mass):
@@ -193,7 +206,8 @@ def main():
                              tittle_name=figure_name[-2]
                              )
 
-    display_average_curve(crank_values, mass_list, user_channel)
+    crank_values, avg_result, ylabel_name = display_average_curve(crank_values, mass_list, user_channel)
+    create_summary_file(crank_values, avg_result, ylabel_name)
 
 
 if __name__ == '__main__':
