@@ -4,8 +4,8 @@ jobs:
     working_directory: ~/BigData_Parser
     run_tests:
       docker:
-        - image: circleci/python:3.7
-          auth:
+        image: circleci/python:3.7
+        auth:
               username: mydockerhub-user
               password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         steps: # steps that comprise the `build` job
