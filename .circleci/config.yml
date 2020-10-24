@@ -18,7 +18,7 @@ jobs:
           - run:
               command: |
                 sudo pip install pipenv
-                pipenv instalxt
+                pipenv install
           - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
               key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
               paths:
@@ -26,8 +26,8 @@ jobs:
           - run:
               command: |
                 pipenv run python
-                pip install --user -r requirements.txt
-                pipenv run python manage.py test
+                pip install -r requirements.txt
+                pipenv run python manage.py
           - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
               path: test-results
           - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
