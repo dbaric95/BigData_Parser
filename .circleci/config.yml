@@ -2,7 +2,7 @@ version: 2
 jobs:
   build: # runs not using Workflows must have a `build` job as entry point
     # directory where steps are run
-    working_directory: ~/File_Handler
+    working_directory: ~/BigData_Parser
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/python:3.6.4
@@ -16,7 +16,6 @@ jobs:
     steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
       - run: sudo chown -R circleci:circleci /usr/local/bin
-      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.7/site-packages
       - restore_cache:
       # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
           key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
@@ -32,7 +31,7 @@ jobs:
           command: |
             pipenv run python
             pip install --user -r requirements.txt
-            pipenv run python manage.py test
+            pipenv run python manage.py
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
       - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
