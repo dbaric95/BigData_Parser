@@ -2,6 +2,7 @@
 ##################################################
 #
 # Created by Davor Baric
+# Date: 25.10.2020.
 # email: davorbaric1@hotmail.com
 #
 # Description:
@@ -31,6 +32,7 @@ def get_user_input():
     print('\n')
     print("=" * 100)
     print("\t\t Created by: Davor Baric")
+    print("\t\t Date: 25.10.2020.")
     print("\t\t e-mail: davorbaric1@hotmail.com")
     print("\t\t Description: Read BigData from .gid files and create figures")
     print("=" * 100)
