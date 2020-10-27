@@ -22,10 +22,6 @@ jobs:
             python3 -m venv myenv
             . myenv/bin/activate
             pip install numpy
-      - run:
-          command: |
-            . myenv/bin/activate
-            python manage.py
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
       - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
