@@ -25,8 +25,8 @@ jobs:
       - run:
           name: run tests
           command: |
-             mkdir test-results
-            . myenv/bin/activate
+            . env/bin/activate
+            mkdir test-results
             python manage.py test
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results

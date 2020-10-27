@@ -1,5 +1,4 @@
 import unittest
-from src.parse_gid_files import *
 
 
 class TestStringMethods(unittest.TestCase):
